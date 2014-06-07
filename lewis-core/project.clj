@@ -6,5 +6,4 @@
   :dependencies [
     [org.clojure/clojure "1.6.0"]
     [org.clojure/data.json "0.2.4"]
-    ]
-  :main lewis-core.core)
+    ])
