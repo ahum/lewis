@@ -1,0 +1,13 @@
+
+# lewis run dev -p test/one
+
+//test
+//it
+//mkbin
+//deploy
+
+
+//src: ~/.lewis/projects/one/master/...
+-> run commands
+
+lewis target devs/devops

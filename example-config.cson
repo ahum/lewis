@@ -1,0 +1,34 @@
+# This is an example config for a project pipeline
+
+name: "my-app"
+git: "git@github.com:corespring/corespring-container.git"
+flows: [
+  dev:
+    trigger: "scm-change"
+    tasks: [ "compile", "unit-test", "integration-test", "build-slug", "deploy-slug", "regression-test" ]
+  qa:
+    trigger: "user-command"
+    flows: ["dev"]
+    tasks: [ "backup-db", "copy-db", "migrate-db", "synch-s3", "deploy-slug", "regression-test"]
+  staging:
+    trigger: "user-command"
+    flows: ["qa"]
+    tasks: [ "backup-db", "copy-db", "migrate-db", "synch-s3", "deploy-slug", "regression-test"]
+  live:
+    trigger: "user-command"
+    flows: ["staging"]
+    tasks: [ "backup-db", "migrate-db", "deploy-slug", "regression-test"]
+]
+
+  ###
+   Tasks
+   --
+   Lewis will try and run the following script relative to the config file:
+   bin/${task_name}
+   eg: bin/compile
+   the following parameters will be passed to the script:
+   --flow flow
+   --uid uid
+
+   This will allow the script to apply the appropriate variables
+  ###

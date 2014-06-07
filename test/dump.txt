@@ -1,0 +1,130 @@
+> b
+
+projects
+
+- cs-api 
+  --> dev
+  --> qa
+
+view flow dev:
+
+  test -> it -> slug -> deploy
+
+edit flow
+
+  test -> it -> slug -> deploy
+
+rm it
+mv it after slug
+mv deploy before slug
+add Nt after slug
+-> Nt not defined - define it? Y/n
+name: nT
+
+
+> run cs-api/dev
+- uid is 3399acf
+- check if flow is already run for uid
+-- if yes - done flow already run (use --force to rerun)
+
+
+- running instance
+-- detect scm changes and trigger flows
+-- chat interface
+-- repl interface ./repl
+-- web interface http://blah.com/ci
+
+server
+service
+
+> history cs-api/dev
+[1] 2.4.14 OK
+[2] 1.4.14 Fail
+...
+
+
+
+
+ct
+t -> it -> deploy -> rt
+
+capi
+
+flow [dev]:
+- trigger: scm change
+t -> it -> slug -> d-dev -> rt-dev
+
+flow [qa]: 
+- trigger: user
+copy-db -> run-migrations -> copy-assets -> d-qa -> rt-qa
+
+flow [staging]:
+- trigger: user
+copy-db -> run-migrations -> copy-assets -> d-st -> rt-st 
+> open source ci tool
+
+flow [live]: 
+- trigger: user
+backup-db -> run-migrations -> d-live -> rt-live
+
+
+- slim
+- simple
+- pluggable
+
+
+--
+
+job
+  - trigger: git
+  - output: log
+
+
+flow
+  1 or more steps
+
+repo/branch centric - this is the uid for the build
+
+
+flow
+    container-test
+    |-> container-int-test
+      |--> container-build
+        |---> container-deploy
+        |---> container-publish-jars
+
+
+> new-job
+? name: a
+? repo: b
+? branch: master
+? build-on-push: Y|N
+
+? build-file:
+
+> vim editor....
+
+
+> show jobs
+- a
+- b
+- c
+
+> show flows
+- flow-one (a -> b -> c)
+
+job-history a
+[10] OK
+[09] OK
+[08] Test Error: .....
+...
+...
+..
+
+> build-job a
+
+> tail-job a
+
+> status
+
+building [a][---------------->                   ] ETA

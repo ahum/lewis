@@ -1,0 +1,70 @@
+{
+  "project" : "cs-api",
+  "source" : {
+    "type" : "local",
+    "path" : "/asrtat/a/statrs/",
+    "name" : "x",
+    "org" : "y",
+    "branch" : "b"
+  },
+  "scm" : "git@github.com/corespring/corespring-api",
+  "branches" : ["master"],
+
+  "vars" : {
+    "db" : {
+      "qa" : "qa-db",
+      "live" : "live-db"
+    },
+    "heroku" : {
+      "live" : "..",
+      "dev" : ".."
+    }
+  },
+  "tasks" : {
+    "test" : {
+      "cmd" : "cs-builder test"
+    },
+    "it" : {
+      "cmd" : "cs-builder it"
+    },
+    "slug" : {
+      "cmd" : "cs-builder mk-slug"
+    },
+    "deploy" : {
+      "cmd" : "cs-builder deploy ${vars.heroku['flow']}"
+    },
+    "rt-dev" : {
+      "cmd" : "cs-builder rt-dev"
+    },
+    "copy-db" : {
+      "cmd" : "cp-db $live_db ${vars.db[flow]}"
+    },
+    "copy-assets" : {
+      "cmd" : "cp-assets live ${vars.s3[flow]}"
+    },
+    "run-migrations" : {
+      "cmd" : "run-migrations ${vars.db[flow]}"
+    },
+    "rt-qa" : {
+      "cmd" : "rt-qa"
+    }
+  },
+  "flows" : {
+    "dev" : {
+      "trigger" : "scm-change",
+      "branch" : "master",
+      "branches": [".", "."],
+      "tasks" : ["test", "it", "slug", "deploy-dev"]
+    },
+    "qa" : {
+      "dependsOn" : "dev",
+      "trigger" : "user",
+      "branch" : "master",
+      "tasks" : ["copy-db", "run-migrations", "copy-assets", "deploy", "rt"]
+    },
+     "staging" : {
+      "trigger" : "user",
+      "tasks" : ["test", "it", "slug", "copy-db-qa", "run-migrations-qa", "copy-assets-qa", "deploy-qa", "rt-qa"]
+    }
+  }
+}
