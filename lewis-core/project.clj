@@ -6,4 +6,6 @@
   :dependencies [
     [org.clojure/clojure "1.6.0"]
     [org.clojure/data.json "0.2.4"]
+    [org.clojure/tools.logging "0.3.0"]
+    [me.raynes/fs "1.4.4"]
     ])

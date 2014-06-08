@@ -1,0 +1,19 @@
+name: "my-app"
+file: "../repo"
+flows: [
+  dev:
+    trigger: "scm-change"
+    tasks: [ "compile", "unit-test", "integration-test", "build-slug", "deploy-slug", "regression-test" ]
+  qa:
+    trigger: "user-command"
+    flows: ["dev"]
+    tasks: [ "backup-db", "copy-db", "migrate-db", "synch-s3", "deploy-slug", "regression-test"]
+  staging:
+    trigger: "user-command"
+    flows: ["qa"]
+    tasks: [ "backup-db", "copy-db", "migrate-db", "synch-s3", "deploy-slug", "regression-test"]
+  live:
+    trigger: "user-command"
+    flows: ["staging"]
+    tasks: [ "backup-db", "migrate-db", "deploy-slug", "regression-test"]
+]

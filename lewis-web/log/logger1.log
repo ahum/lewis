@@ -1,0 +1,162 @@
+[2014-06-08 15:06:12,514][DEBUG][org.eclipse.jetty.util.log] Logging to org.slf4j.impl.Log4jLoggerAdapter(org.eclipse.jetty.util.log) via org.eclipse.jetty.util.log.Slf4jLog
+[2014-06-08 15:06:16,743][INFO][lewis-web.handler] App booting up {:home-dir ~/.lewis, :mongo-uri mongodb://localhost/lewis-dev}
+[2014-06-08 15:06:16,777][DEBUG][org.eclipse.jetty.util.component.Container] Container org.eclipse.jetty.server.Server@47044f7d + SelectChannelConnector@0.0.0.0:3000 as connector
+[2014-06-08 15:06:16,779][DEBUG][org.eclipse.jetty.util.component.Container] Container org.eclipse.jetty.server.Server@47044f7d + ring.adapter.jetty.proxy$org.eclipse.jetty.server.handler.AbstractHandler$ff19274a@6b162ecc as handler
+[2014-06-08 15:06:16,779][DEBUG][org.eclipse.jetty.util.component.Container] Container org.eclipse.jetty.server.Server@47044f7d + qtp1248079435{8<=0<=0/50,-1} as threadpool
+[2014-06-08 15:06:16,779][DEBUG][org.eclipse.jetty.util.component.AbstractLifeCycle] starting org.eclipse.jetty.server.Server@47044f7d
+[2014-06-08 15:06:16,780][INFO][org.eclipse.jetty.server.Server] jetty-7.6.8.v20121106
+[2014-06-08 15:06:16,795][DEBUG][org.eclipse.jetty.util.component.AbstractLifeCycle] starting ring.adapter.jetty.proxy$org.eclipse.jetty.server.handler.AbstractHandler$ff19274a@6b162ecc
+[2014-06-08 15:06:16,795][DEBUG][org.eclipse.jetty.server.handler.AbstractHandler] starting ring.adapter.jetty.proxy$org.eclipse.jetty.server.handler.AbstractHandler$ff19274a@6b162ecc
+[2014-06-08 15:06:16,795][DEBUG][org.eclipse.jetty.util.component.AbstractLifeCycle] STARTED ring.adapter.jetty.proxy$org.eclipse.jetty.server.handler.AbstractHandler$ff19274a@6b162ecc
+[2014-06-08 15:06:16,796][DEBUG][org.eclipse.jetty.server.handler.AbstractHandler] starting org.eclipse.jetty.server.Server@47044f7d
+[2014-06-08 15:06:16,796][DEBUG][org.eclipse.jetty.util.component.AbstractLifeCycle] starting qtp1248079435{8<=0<=0/50,-1}
+[2014-06-08 15:06:16,798][DEBUG][org.eclipse.jetty.util.component.AbstractLifeCycle] STARTED qtp1248079435{8<=7<=8/50,0}
+[2014-06-08 15:06:16,798][DEBUG][org.eclipse.jetty.util.component.AbstractLifeCycle] starting SelectChannelConnector@0.0.0.0:3000
+[2014-06-08 15:06:16,808][DEBUG][org.eclipse.jetty.util.component.AbstractLifeCycle] starting null/null
+[2014-06-08 15:06:16,809][DEBUG][org.eclipse.jetty.util.component.AbstractLifeCycle] STARTED PooledBuffers [0/1024@6144,0/1024@16384,0/1024@-]/PooledBuffers [0/1024@6144,0/1024@32768,0/1024@-]
+[2014-06-08 15:06:16,809][DEBUG][org.eclipse.jetty.util.component.AbstractLifeCycle] starting org.eclipse.jetty.server.nio.SelectChannelConnector$ConnectorSelectorManager@590d6c76
+[2014-06-08 15:06:16,817][DEBUG][org.eclipse.jetty.util.component.AbstractLifeCycle] STARTED org.eclipse.jetty.server.nio.SelectChannelConnector$ConnectorSelectorManager@590d6c76
+[2014-06-08 15:06:16,817][DEBUG][org.eclipse.jetty.io.nio] Starting Thread[qtp1248079435-10 Selector0,5,main] on org.eclipse.jetty.io.nio.SelectorManager$1@192e7717
+[2014-06-08 15:06:16,817][DEBUG][org.eclipse.jetty.io.nio] Starting Thread[qtp1248079435-11 Selector1,5,main] on org.eclipse.jetty.io.nio.SelectorManager$1@278346a8
+[2014-06-08 15:06:16,818][INFO][org.eclipse.jetty.server.AbstractConnector] Started SelectChannelConnector@0.0.0.0:3000
+[2014-06-08 15:06:16,818][DEBUG][org.eclipse.jetty.util.component.AbstractLifeCycle] STARTED SelectChannelConnector@0.0.0.0:3000
+[2014-06-08 15:06:16,818][DEBUG][org.eclipse.jetty.util.component.AbstractLifeCycle] STARTED org.eclipse.jetty.server.Server@47044f7d
+[2014-06-08 15:06:16,919][DEBUG][org.eclipse.jetty.io.nio] created SCEP@2f6ad666{l(/127.0.0.1:50717)<->r(/127.0.0.1:3000),d=false,open=true,ishut=false,oshut=false,rb=false,wb=false,w=true,i=0}-{AsyncHttpConnection@652c903f,g=HttpGenerator{s=0,h=-1,b=-1,c=-1},p=HttpParser{s=-14,l=0,c=0},r=0}
+[2014-06-08 15:06:16,919][DEBUG][org.eclipse.jetty.io.nio] created SCEP@22c79589{l(/127.0.0.1:50718)<->r(/127.0.0.1:3000),d=false,open=true,ishut=false,oshut=false,rb=false,wb=false,w=true,i=0}-{AsyncHttpConnection@35784cce,g=HttpGenerator{s=0,h=-1,b=-1,c=-1},p=HttpParser{s=-14,l=0,c=0},r=0}
+[2014-06-08 15:06:16,922][DEBUG][org.eclipse.jetty.http.HttpParser] filled 0/0
+[2014-06-08 15:06:16,922][DEBUG][org.eclipse.jetty.http.HttpParser] filled 0/0
+[2014-06-08 15:06:17,113][DEBUG][org.eclipse.jetty.http.HttpParser] filled 359/359
+[2014-06-08 15:06:17,124][DEBUG][org.eclipse.jetty.server.Server] REQUEST / on AsyncHttpConnection@652c903f,g=HttpGenerator{s=0,h=-1,b=-1,c=-1},p=HttpParser{s=-5,l=23,c=0},r=1
+[2014-06-08 15:06:17,213][DEBUG][org.eclipse.jetty.server.Server] RESPONSE /  200 handled=true
+[2014-06-08 15:06:17,214][DEBUG][org.eclipse.jetty.server.AsyncHttpConnection] Enabled read interest SCEP@2f6ad666{l(/127.0.0.1:50717)<->r(/127.0.0.1:3000),d=true,open=true,ishut=false,oshut=false,rb=false,wb=false,w=true,i=1r}-{AsyncHttpConnection@652c903f,g=HttpGenerator{s=4,h=0,b=0,c=-1},p=HttpParser{s=0,l=23,c=0},r=1}
+[2014-06-08 15:06:17,218][DEBUG][org.eclipse.jetty.http.HttpParser] filled 0/0
+[2014-06-08 15:06:22,539][DEBUG][org.eclipse.jetty.http.HttpParser] filled 385/385
+[2014-06-08 15:06:22,540][DEBUG][org.eclipse.jetty.server.Server] REQUEST / on AsyncHttpConnection@652c903f,g=HttpGenerator{s=0,h=-1,b=-1,c=-1},p=HttpParser{s=-5,l=23,c=0},r=2
+[2014-06-08 15:06:22,545][DEBUG][org.eclipse.jetty.server.Server] RESPONSE /  200 handled=true
+[2014-06-08 15:06:22,545][DEBUG][org.eclipse.jetty.server.AsyncHttpConnection] Enabled read interest SCEP@2f6ad666{l(/127.0.0.1:50717)<->r(/127.0.0.1:3000),d=true,open=true,ishut=false,oshut=false,rb=false,wb=false,w=true,i=1r}-{AsyncHttpConnection@652c903f,g=HttpGenerator{s=4,h=0,b=0,c=-1},p=HttpParser{s=0,l=23,c=0},r=2}
+[2014-06-08 15:06:22,545][DEBUG][org.eclipse.jetty.http.HttpParser] filled 0/0
+[2014-06-08 15:06:35,582][DEBUG][org.eclipse.jetty.io.nio.ChannelEndPoint] ishut SCEP@22c79589{l(/127.0.0.1:50718)<->r(/127.0.0.1:3000),d=true,open=true,ishut=false,oshut=false,rb=false,wb=false,w=true,i=1r}-{AsyncHttpConnection@35784cce,g=HttpGenerator{s=0,h=-1,b=-1,c=-1},p=HttpParser{s=-14,l=0,c=0},r=0}
+[2014-06-08 15:06:35,582][DEBUG][org.eclipse.jetty.http.HttpParser] filled -1/0
+[2014-06-08 15:06:35,583][DEBUG][org.eclipse.jetty.server.AsyncHttpConnection] Disabled read interest while writing response SCEP@22c79589{l(/127.0.0.1:50718)<->r(/127.0.0.1:3000),d=true,open=true,ishut=true,oshut=false,rb=false,wb=false,w=true,i=1r}-{AsyncHttpConnection@35784cce,g=HttpGenerator{s=0,h=-1,b=-1,c=-1},p=HttpParser{s=0,l=0,c=0},r=0}
+[2014-06-08 15:06:35,583][DEBUG][org.eclipse.jetty.io.nio.ChannelEndPoint] close SCEP@22c79589{l(/127.0.0.1:50718)<->r(/127.0.0.1:3000),d=true,open=true,ishut=true,oshut=false,rb=false,wb=false,w=true,i=1r}-{AsyncHttpConnection@35784cce,g=HttpGenerator{s=0,h=-1,b=-1,c=-1},p=HttpParser{s=0,l=0,c=0},r=0}
+[2014-06-08 15:06:35,585][DEBUG][org.eclipse.jetty.io.nio] destroyEndPoint SCEP@22c79589{l(null)<->r(0.0.0.0/0.0.0.0:3000),d=false,open=false,ishut=true,oshut=true,rb=false,wb=false,w=true,i=1!}-{AsyncHttpConnection@35784cce,g=HttpGenerator{s=0,h=-1,b=-1,c=-1},p=HttpParser{s=0,l=0,c=0},r=0}
+[2014-06-08 15:06:35,586][DEBUG][org.eclipse.jetty.server.AbstractHttpConnection] closed AsyncHttpConnection@35784cce,g=HttpGenerator{s=0,h=-1,b=-1,c=-1},p=HttpParser{s=0,l=0,c=0},r=0
+[2014-06-08 15:06:46,482][DEBUG][org.eclipse.jetty.io.nio] created SCEP@113ceae{l(/127.0.0.1:50723)<->r(/127.0.0.1:3000),d=false,open=true,ishut=false,oshut=false,rb=false,wb=false,w=true,i=0}-{AsyncHttpConnection@7274fa82,g=HttpGenerator{s=0,h=-1,b=-1,c=-1},p=HttpParser{s=-14,l=0,c=0},r=0}
+[2014-06-08 15:06:46,482][DEBUG][org.eclipse.jetty.http.HttpParser] filled 0/0
+[2014-06-08 15:06:46,675][DEBUG][org.eclipse.jetty.http.HttpParser] filled 359/359
+[2014-06-08 15:06:46,676][DEBUG][org.eclipse.jetty.server.Server] REQUEST / on AsyncHttpConnection@652c903f,g=HttpGenerator{s=0,h=-1,b=-1,c=-1},p=HttpParser{s=-5,l=23,c=0},r=3
+[2014-06-08 15:06:46,678][DEBUG][org.eclipse.jetty.server.Server] RESPONSE /  200 handled=true
+[2014-06-08 15:06:46,679][DEBUG][org.eclipse.jetty.server.AsyncHttpConnection] Enabled read interest SCEP@2f6ad666{l(/127.0.0.1:50717)<->r(/127.0.0.1:3000),d=true,open=true,ishut=false,oshut=false,rb=false,wb=false,w=true,i=1r}-{AsyncHttpConnection@652c903f,g=HttpGenerator{s=4,h=0,b=0,c=-1},p=HttpParser{s=0,l=23,c=0},r=3}
+[2014-06-08 15:06:46,679][DEBUG][org.eclipse.jetty.http.HttpParser] filled 0/0
+[2014-06-08 15:07:05,584][DEBUG][org.eclipse.jetty.io.nio.ChannelEndPoint] ishut SCEP@113ceae{l(/127.0.0.1:50723)<->r(/127.0.0.1:3000),d=true,open=true,ishut=false,oshut=false,rb=false,wb=false,w=true,i=1r}-{AsyncHttpConnection@7274fa82,g=HttpGenerator{s=0,h=-1,b=-1,c=-1},p=HttpParser{s=-14,l=0,c=0},r=0}
+[2014-06-08 15:07:05,584][DEBUG][org.eclipse.jetty.http.HttpParser] filled -1/0
+[2014-06-08 15:07:05,584][DEBUG][org.eclipse.jetty.server.AsyncHttpConnection] Disabled read interest while writing response SCEP@113ceae{l(/127.0.0.1:50723)<->r(/127.0.0.1:3000),d=true,open=true,ishut=true,oshut=false,rb=false,wb=false,w=true,i=1r}-{AsyncHttpConnection@7274fa82,g=HttpGenerator{s=0,h=-1,b=-1,c=-1},p=HttpParser{s=0,l=0,c=0},r=0}
+[2014-06-08 15:07:05,585][DEBUG][org.eclipse.jetty.io.nio.ChannelEndPoint] close SCEP@113ceae{l(/127.0.0.1:50723)<->r(/127.0.0.1:3000),d=true,open=true,ishut=true,oshut=false,rb=false,wb=false,w=true,i=1r}-{AsyncHttpConnection@7274fa82,g=HttpGenerator{s=0,h=-1,b=-1,c=-1},p=HttpParser{s=0,l=0,c=0},r=0}
+[2014-06-08 15:07:05,585][DEBUG][org.eclipse.jetty.io.nio] destroyEndPoint SCEP@113ceae{l(null)<->r(0.0.0.0/0.0.0.0:3000),d=false,open=false,ishut=true,oshut=true,rb=false,wb=false,w=true,i=1!}-{AsyncHttpConnection@7274fa82,g=HttpGenerator{s=0,h=-1,b=-1,c=-1},p=HttpParser{s=0,l=0,c=0},r=0}
+[2014-06-08 15:07:05,585][DEBUG][org.eclipse.jetty.server.AbstractHttpConnection] closed AsyncHttpConnection@7274fa82,g=HttpGenerator{s=0,h=-1,b=-1,c=-1},p=HttpParser{s=0,l=0,c=0},r=0
+[2014-06-08 15:07:16,473][DEBUG][org.eclipse.jetty.util.log] Logging to org.slf4j.impl.Log4jLoggerAdapter(org.eclipse.jetty.util.log) via org.eclipse.jetty.util.log.Slf4jLog
+[2014-06-08 15:07:20,662][INFO][lewis-web.handler] App booting up {:home-dir ~/.lewis, :mongo-uri mongodb://localhost/lewis-dev}
+[2014-06-08 15:07:20,697][DEBUG][org.eclipse.jetty.util.component.Container] Container org.eclipse.jetty.server.Server@58a765ce + SelectChannelConnector@0.0.0.0:3000 as connector
+[2014-06-08 15:07:20,699][DEBUG][org.eclipse.jetty.util.component.Container] Container org.eclipse.jetty.server.Server@58a765ce + ring.adapter.jetty.proxy$org.eclipse.jetty.server.handler.AbstractHandler$ff19274a@5eed6dfb as handler
+[2014-06-08 15:07:20,700][DEBUG][org.eclipse.jetty.util.component.Container] Container org.eclipse.jetty.server.Server@58a765ce + qtp1453632464{8<=0<=0/50,-1} as threadpool
+[2014-06-08 15:07:20,700][DEBUG][org.eclipse.jetty.util.component.AbstractLifeCycle] starting org.eclipse.jetty.server.Server@58a765ce
+[2014-06-08 15:07:20,700][INFO][org.eclipse.jetty.server.Server] jetty-7.6.8.v20121106
+[2014-06-08 15:07:20,719][DEBUG][org.eclipse.jetty.util.component.AbstractLifeCycle] starting ring.adapter.jetty.proxy$org.eclipse.jetty.server.handler.AbstractHandler$ff19274a@5eed6dfb
+[2014-06-08 15:07:20,720][DEBUG][org.eclipse.jetty.server.handler.AbstractHandler] starting ring.adapter.jetty.proxy$org.eclipse.jetty.server.handler.AbstractHandler$ff19274a@5eed6dfb
+[2014-06-08 15:07:20,720][DEBUG][org.eclipse.jetty.util.component.AbstractLifeCycle] STARTED ring.adapter.jetty.proxy$org.eclipse.jetty.server.handler.AbstractHandler$ff19274a@5eed6dfb
+[2014-06-08 15:07:20,720][DEBUG][org.eclipse.jetty.server.handler.AbstractHandler] starting org.eclipse.jetty.server.Server@58a765ce
+[2014-06-08 15:07:20,720][DEBUG][org.eclipse.jetty.util.component.AbstractLifeCycle] starting qtp1453632464{8<=0<=0/50,-1}
+[2014-06-08 15:07:20,722][DEBUG][org.eclipse.jetty.util.component.AbstractLifeCycle] STARTED qtp1453632464{8<=7<=8/50,0}
+[2014-06-08 15:07:20,723][DEBUG][org.eclipse.jetty.util.component.AbstractLifeCycle] starting SelectChannelConnector@0.0.0.0:3000
+[2014-06-08 15:07:20,736][DEBUG][org.eclipse.jetty.util.component.AbstractLifeCycle] starting null/null
+[2014-06-08 15:07:20,739][DEBUG][org.eclipse.jetty.util.component.AbstractLifeCycle] STARTED PooledBuffers [0/1024@6144,0/1024@16384,0/1024@-]/PooledBuffers [0/1024@6144,0/1024@32768,0/1024@-]
+[2014-06-08 15:07:20,740][DEBUG][org.eclipse.jetty.util.component.AbstractLifeCycle] starting org.eclipse.jetty.server.nio.SelectChannelConnector$ConnectorSelectorManager@5a05dd30
+[2014-06-08 15:07:20,748][DEBUG][org.eclipse.jetty.util.component.AbstractLifeCycle] STARTED org.eclipse.jetty.server.nio.SelectChannelConnector$ConnectorSelectorManager@5a05dd30
+[2014-06-08 15:07:20,748][DEBUG][org.eclipse.jetty.io.nio] Starting Thread[qtp1453632464-10 Selector0,5,main] on org.eclipse.jetty.io.nio.SelectorManager$1@6a9db0a5
+[2014-06-08 15:07:20,748][DEBUG][org.eclipse.jetty.io.nio] Starting Thread[qtp1453632464-12 Selector1,5,main] on org.eclipse.jetty.io.nio.SelectorManager$1@54ba3a2d
+[2014-06-08 15:07:20,750][INFO][org.eclipse.jetty.server.AbstractConnector] Started SelectChannelConnector@0.0.0.0:3000
+[2014-06-08 15:07:20,750][DEBUG][org.eclipse.jetty.util.component.AbstractLifeCycle] STARTED SelectChannelConnector@0.0.0.0:3000
+[2014-06-08 15:07:20,751][DEBUG][org.eclipse.jetty.util.component.AbstractLifeCycle] STARTED org.eclipse.jetty.server.Server@58a765ce
+[2014-06-08 15:07:20,871][DEBUG][org.eclipse.jetty.io.nio] created SCEP@2182ab35{l(/127.0.0.1:50730)<->r(/127.0.0.1:3000),d=false,open=true,ishut=false,oshut=false,rb=false,wb=false,w=true,i=0}-{AsyncHttpConnection@2a890061,g=HttpGenerator{s=0,h=-1,b=-1,c=-1},p=HttpParser{s=-14,l=0,c=0},r=0}
+[2014-06-08 15:07:20,871][DEBUG][org.eclipse.jetty.io.nio] created SCEP@30163794{l(/127.0.0.1:50731)<->r(/127.0.0.1:3000),d=false,open=true,ishut=false,oshut=false,rb=false,wb=false,w=true,i=0}-{AsyncHttpConnection@7f41e90b,g=HttpGenerator{s=0,h=-1,b=-1,c=-1},p=HttpParser{s=-14,l=0,c=0},r=0}
+[2014-06-08 15:07:20,875][DEBUG][org.eclipse.jetty.http.HttpParser] filled 0/0
+[2014-06-08 15:07:20,875][DEBUG][org.eclipse.jetty.http.HttpParser] filled 0/0
+[2014-06-08 15:07:21,084][DEBUG][org.eclipse.jetty.http.HttpParser] filled 359/359
+[2014-06-08 15:07:21,095][DEBUG][org.eclipse.jetty.server.Server] REQUEST / on AsyncHttpConnection@2a890061,g=HttpGenerator{s=0,h=-1,b=-1,c=-1},p=HttpParser{s=-5,l=23,c=0},r=1
+[2014-06-08 15:07:21,181][DEBUG][org.eclipse.jetty.server.Server] RESPONSE /  200 handled=true
+[2014-06-08 15:07:21,183][DEBUG][org.eclipse.jetty.server.AsyncHttpConnection] Enabled read interest SCEP@2182ab35{l(/127.0.0.1:50730)<->r(/127.0.0.1:3000),d=true,open=true,ishut=false,oshut=false,rb=false,wb=false,w=true,i=1r}-{AsyncHttpConnection@2a890061,g=HttpGenerator{s=4,h=0,b=0,c=-1},p=HttpParser{s=0,l=23,c=0},r=1}
+[2014-06-08 15:07:21,188][DEBUG][org.eclipse.jetty.http.HttpParser] filled 0/0
+[2014-06-08 15:07:35,585][DEBUG][org.eclipse.jetty.io.nio.ChannelEndPoint] ishut SCEP@30163794{l(/127.0.0.1:50731)<->r(/127.0.0.1:3000),d=true,open=true,ishut=false,oshut=false,rb=false,wb=false,w=true,i=1r}-{AsyncHttpConnection@7f41e90b,g=HttpGenerator{s=0,h=-1,b=-1,c=-1},p=HttpParser{s=-14,l=0,c=0},r=0}
+[2014-06-08 15:07:35,586][DEBUG][org.eclipse.jetty.http.HttpParser] filled -1/0
+[2014-06-08 15:07:35,586][DEBUG][org.eclipse.jetty.server.AsyncHttpConnection] Disabled read interest while writing response SCEP@30163794{l(/127.0.0.1:50731)<->r(/127.0.0.1:3000),d=true,open=true,ishut=true,oshut=false,rb=false,wb=false,w=true,i=1r}-{AsyncHttpConnection@7f41e90b,g=HttpGenerator{s=0,h=-1,b=-1,c=-1},p=HttpParser{s=0,l=0,c=0},r=0}
+[2014-06-08 15:07:35,587][DEBUG][org.eclipse.jetty.io.nio.ChannelEndPoint] close SCEP@30163794{l(/127.0.0.1:50731)<->r(/127.0.0.1:3000),d=true,open=true,ishut=true,oshut=false,rb=false,wb=false,w=true,i=1r}-{AsyncHttpConnection@7f41e90b,g=HttpGenerator{s=0,h=-1,b=-1,c=-1},p=HttpParser{s=0,l=0,c=0},r=0}
+[2014-06-08 15:07:35,589][DEBUG][org.eclipse.jetty.io.nio] destroyEndPoint SCEP@30163794{l(null)<->r(0.0.0.0/0.0.0.0:3000),d=false,open=false,ishut=true,oshut=true,rb=false,wb=false,w=true,i=1!}-{AsyncHttpConnection@7f41e90b,g=HttpGenerator{s=0,h=-1,b=-1,c=-1},p=HttpParser{s=0,l=0,c=0},r=0}
+[2014-06-08 15:07:35,589][DEBUG][org.eclipse.jetty.server.AbstractHttpConnection] closed AsyncHttpConnection@7f41e90b,g=HttpGenerator{s=0,h=-1,b=-1,c=-1},p=HttpParser{s=0,l=0,c=0},r=0
+[2014-06-08 15:08:19,811][INFO][lewis-web.handler] App booting up {:home-dir ~/.lewis, :mongo-uri mongodb://localhost/lewis-dev}
+[2014-06-08 15:08:19,857][INFO][org.eclipse.jetty.server.Server] jetty-7.6.8.v20121106
+[2014-06-08 15:08:19,903][INFO][org.eclipse.jetty.server.AbstractConnector] Started SelectChannelConnector@0.0.0.0:3000
+[2014-06-08 15:12:13,520][INFO][lewis-core.core] installing: {:git git@github.com:ahum/example-pipeline.git}
+[2014-06-08 15:13:24,042][INFO][lewis-web.handler] App booting up {:home-dir ~/.lewis, :mongo-uri mongodb://localhost/lewis-dev}
+[2014-06-08 15:13:24,082][INFO][org.eclipse.jetty.server.Server] jetty-7.6.8.v20121106
+[2014-06-08 15:13:24,120][INFO][org.eclipse.jetty.server.AbstractConnector] Started SelectChannelConnector@0.0.0.0:3000
+[2014-06-08 15:16:05,498][INFO][lewis-web.handler] App booting up {:home-dir ~/.lewis, :mongo-uri mongodb://localhost/lewis-dev}
+[2014-06-08 15:16:19,437][INFO][lewis-web.handler] App booting up {:home-dir ~/.lewis, :mongo-uri mongodb://localhost/lewis-dev}
+[2014-06-08 15:16:19,439][DEBUG][lewis-web.handler] >> App booting up {:home-dir ~/.lewis, :mongo-uri mongodb://localhost/lewis-dev}
+[2014-06-08 15:16:19,474][INFO][org.eclipse.jetty.server.Server] jetty-7.6.8.v20121106
+[2014-06-08 15:16:19,526][INFO][org.eclipse.jetty.server.AbstractConnector] Started SelectChannelConnector@0.0.0.0:3000
+[2014-06-08 15:17:02,986][INFO][lewis-web.handler] App booting up {:home-dir ~/.lewis, :mongo-uri mongodb://localhost/lewis-dev}
+[2014-06-08 15:17:02,989][DEBUG][lewis-web.handler] >> App booting up {:home-dir ~/.lewis, :mongo-uri mongodb://localhost/lewis-dev}
+[2014-06-08 15:17:03,040][INFO][org.eclipse.jetty.server.Server] jetty-7.6.8.v20121106
+[2014-06-08 15:17:03,088][INFO][org.eclipse.jetty.server.AbstractConnector] Started SelectChannelConnector@0.0.0.0:3000
+[2014-06-08 15:17:32,899][INFO][lewis-web.handler] App booting up {:home-dir ~/.lewis, :mongo-uri mongodb://localhost/lewis-dev}
+[2014-06-08 15:17:32,901][DEBUG][lewis-web.handler] >> App booting up {:home-dir ~/.lewis, :mongo-uri mongodb://localhost/lewis-dev}
+[2014-06-08 15:17:32,942][INFO][org.eclipse.jetty.server.Server] jetty-7.6.8.v20121106
+[2014-06-08 15:17:32,988][INFO][org.eclipse.jetty.server.AbstractConnector] Started SelectChannelConnector@0.0.0.0:3000
+[2014-06-08 15:17:52,950][INFO][lewis-web.handler] App booting up {:home-dir ~/.lewis, :mongo-uri mongodb://localhost/lewis-dev}
+[2014-06-08 15:17:52,952][DEBUG][lewis-web.handler] >> App booting up {:home-dir ~/.lewis, :mongo-uri mongodb://localhost/lewis-dev}
+[2014-06-08 15:17:52,988][INFO][org.eclipse.jetty.server.Server] jetty-7.6.8.v20121106
+[2014-06-08 15:17:53,040][INFO][org.eclipse.jetty.server.AbstractConnector] Started SelectChannelConnector@0.0.0.0:3000
+[2014-06-08 15:19:22,260][INFO][lewis-web.handler] App booting up {:home-dir ~/.lewis, :mongo-uri mongodb://localhost/lewis-dev}
+[2014-06-08 15:19:22,263][DEBUG][lewis-web.handler] >> App booting up {:home-dir ~/.lewis, :mongo-uri mongodb://localhost/lewis-dev}
+[2014-06-08 15:19:22,300][INFO][org.eclipse.jetty.server.Server] jetty-7.6.8.v20121106
+[2014-06-08 15:19:22,342][INFO][org.eclipse.jetty.server.AbstractConnector] Started SelectChannelConnector@0.0.0.0:3000
+[2014-06-08 15:21:05,116][INFO][lewis-web.handler] App booting up {:home-dir ~/.lewis, :mongo-uri mongodb://localhost/lewis-dev}
+[2014-06-08 15:21:05,118][DEBUG][lewis-web.handler] >> App booting up {:home-dir ~/.lewis, :mongo-uri mongodb://localhost/lewis-dev}
+[2014-06-08 15:21:05,156][INFO][org.eclipse.jetty.server.Server] jetty-7.6.8.v20121106
+[2014-06-08 15:21:05,200][INFO][org.eclipse.jetty.server.AbstractConnector] Started SelectChannelConnector@0.0.0.0:3000
+[2014-06-08 15:21:47,283][INFO][lewis-web.handler] App booting up {:home-dir ~/.lewis, :mongo-uri mongodb://localhost/lewis-dev}
+[2014-06-08 15:21:47,286][DEBUG][lewis-web.handler] >> App booting up {:home-dir ~/.lewis, :mongo-uri mongodb://localhost/lewis-dev}
+[2014-06-08 15:21:47,328][INFO][org.eclipse.jetty.server.Server] jetty-7.6.8.v20121106
+[2014-06-08 15:21:47,368][INFO][org.eclipse.jetty.server.AbstractConnector] Started SelectChannelConnector@0.0.0.0:3000
+[2014-06-08 15:23:07,682][INFO][lewis-web.handler] App booting up {:home-dir ~/.lewis, :mongo-uri mongodb://localhost/lewis-dev}
+[2014-06-08 15:23:07,686][DEBUG][lewis-web.handler] >> App booting up {:home-dir ~/.lewis, :mongo-uri mongodb://localhost/lewis-dev}
+[2014-06-08 15:23:07,740][INFO][org.eclipse.jetty.server.Server] jetty-7.6.8.v20121106
+[2014-06-08 15:23:07,781][INFO][org.eclipse.jetty.server.AbstractConnector] Started SelectChannelConnector@0.0.0.0:3000
+[2014-06-08 15:24:04,024][INFO][lewis-web.handler] App booting up {:home-dir ~/.lewis, :mongo-uri mongodb://localhost/lewis-dev}
+[2014-06-08 15:24:04,027][DEBUG][lewis-web.handler] >> App booting up {:home-dir ~/.lewis, :mongo-uri mongodb://localhost/lewis-dev}
+[2014-06-08 15:24:04,073][INFO][org.eclipse.jetty.server.Server] jetty-7.6.8.v20121106
+[2014-06-08 15:24:04,117][INFO][org.eclipse.jetty.server.AbstractConnector] Started SelectChannelConnector@0.0.0.0:3000
+[2014-06-08 15:25:04,689][INFO][lewis-web.handler] App booting up {:home-dir ~/.lewis, :mongo-uri mongodb://localhost/lewis-dev}
+[2014-06-08 15:25:04,693][DEBUG][lewis-web.handler] >> App booting up {:home-dir ~/.lewis, :mongo-uri mongodb://localhost/lewis-dev}
+[2014-06-08 15:25:04,737][INFO][org.eclipse.jetty.server.Server] jetty-7.6.8.v20121106
+[2014-06-08 15:25:04,776][INFO][org.eclipse.jetty.server.AbstractConnector] Started SelectChannelConnector@0.0.0.0:3000
+[2014-06-08 15:25:26,940][INFO][lewis-web.handler] App booting up {:home-dir ~/.lewis, :mongo-uri mongodb://localhost/lewis-dev}
+[2014-06-08 15:25:26,943][DEBUG][lewis-web.handler] >> App booting up {:home-dir ~/.lewis, :mongo-uri mongodb://localhost/lewis-dev}
+[2014-06-08 15:25:26,984][INFO][org.eclipse.jetty.server.Server] jetty-7.6.8.v20121106
+[2014-06-08 15:25:27,026][INFO][org.eclipse.jetty.server.AbstractConnector] Started SelectChannelConnector@0.0.0.0:3000
+[2014-06-08 15:26:27,485][INFO][lewis-web.handler] App booting up {:home-dir ~/.lewis, :mongo-uri mongodb://localhost/lewis-dev}
+[2014-06-08 15:26:27,488][DEBUG][lewis-web.handler] >> App booting up {:home-dir ~/.lewis, :mongo-uri mongodb://localhost/lewis-dev}
+[2014-06-08 15:26:27,531][INFO][org.eclipse.jetty.server.Server] jetty-7.6.8.v20121106
+[2014-06-08 15:26:27,578][INFO][org.eclipse.jetty.server.AbstractConnector] Started SelectChannelConnector@0.0.0.0:3000
+[2014-06-08 15:26:30,037][INFO][lewis-core.core] installing: {:git git@github.com:ahum/example-pipeline.git}
+[2014-06-08 15:27:14,071][INFO][lewis-web.handler] App booting up {:home-dir ~/.lewis, :mongo-uri mongodb://localhost/lewis-dev}
+[2014-06-08 15:27:14,073][DEBUG][lewis-web.handler] >> App booting up {:home-dir ~/.lewis, :mongo-uri mongodb://localhost/lewis-dev}
+[2014-06-08 15:28:12,555][INFO][lewis-web.handler] App booting up {:home-dir ~/.lewis, :mongo-uri mongodb://localhost/lewis-dev}
+[2014-06-08 15:28:12,557][DEBUG][lewis-web.handler] >> App booting up {:home-dir ~/.lewis, :mongo-uri mongodb://localhost/lewis-dev}
+[2014-06-08 15:28:12,593][INFO][org.eclipse.jetty.server.Server] jetty-7.6.8.v20121106
+[2014-06-08 15:28:12,640][INFO][org.eclipse.jetty.server.AbstractConnector] Started SelectChannelConnector@0.0.0.0:3000
+[2014-06-08 15:28:17,034][TRACE][lewis-core.core] installing: {:git git@github.com:ahum/example-pipeline.git}
+[2014-06-08 15:50:39,027][INFO][lewis-web.handler] App booting up {:home-dir ~/.lewis, :mongo-uri mongodb://localhost/lewis-dev}
+[2014-06-08 15:50:39,031][DEBUG][lewis-web.handler] >> App booting up {:home-dir ~/.lewis, :mongo-uri mongodb://localhost/lewis-dev}
+[2014-06-08 17:43:11,351][INFO][lewis-web.handler] App booting up {:home-dir ~/.lewis, :mongo-uri mongodb://localhost/lewis-dev}
+[2014-06-08 17:43:11,353][DEBUG][lewis-web.handler] >> App booting up {:home-dir ~/.lewis, :mongo-uri mongodb://localhost/lewis-dev}
