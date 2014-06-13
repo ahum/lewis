@@ -17,8 +17,16 @@
   (def from (params :path))
   (assert (not-nil? from))
   (log/trace "copy" from "->" dest-dir)
-  (fs/copy-dir from dest-dir))
+  (fs/copy-dir from dest-dir)
+  (println "Reading config...")
+  (read-config dest-dir)
+  )
 
+(defn- read-config
+  [path]
+  "Read the config file"
+  (path)
+  )
 (defmethod #^{:private true} install :git [params dest-dir]
   (log/debug "installing pipeline from git repo")
   )
