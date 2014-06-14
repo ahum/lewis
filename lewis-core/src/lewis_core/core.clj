@@ -3,6 +3,7 @@
     [clojure.java.io :as io]
     [clojure.tools.logging :as log]
     [me.raynes.fs :as fs]
+    [lewis-core.cfg :as cfg]
     ))
 
 (use '[clojure.string :only (join split)])
@@ -18,15 +19,8 @@
   (assert (not-nil? from))
   (log/trace "copy" from "->" dest-dir)
   (fs/copy-dir from dest-dir)
-  (println "Reading config...")
-  (read-config dest-dir)
   )
 
-(defn- read-config
-  [path]
-  "Read the config file"
-  (path)
-  )
 (defmethod #^{:private true} install :git [params dest-dir]
   (log/debug "installing pipeline from git repo")
   )
@@ -42,4 +36,7 @@
          dest-dir (join "/" [pipeline-dir (pipeline-config :name) "pipeline"]) ]
     (fs/mkdirs pipeline-dir)
     (install pipeline-config dest-dir)
+    ;TODO...
+    ;(println "Reading config...")
+    ;(def config cfg/read-cfg dest-dir)
     {:result {:installation-path dest-dir}}))
