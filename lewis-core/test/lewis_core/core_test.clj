@@ -9,6 +9,7 @@
 
 (use-fixtures :once fh/clean-tmp)
 
+; TODO: pre-process path in pipeline .yml
 (deftest install-pipeline-test
   (testing "A pipeline is installed from file"
     (let

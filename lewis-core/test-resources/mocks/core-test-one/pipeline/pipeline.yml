@@ -1,5 +1,6 @@
 name: my-app
-file: ../repo
+src:
+  file: ../repo
 flows:
   - dev:
     trigger: scm-change

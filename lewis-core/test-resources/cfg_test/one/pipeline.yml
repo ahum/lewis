@@ -1,2 +1,4 @@
 name: test-config
 description: some description
+src:
+  file: ~/dev/github/ahum/lewis/lewis-core/test-resources/mocks
