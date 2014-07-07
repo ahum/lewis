@@ -7,7 +7,12 @@
             [lewis-core.file-helper :as fh]
             ))
 
-(use-fixtures :once fh/clean-tmp)
+(defn prep
+    (fh/clean-tmp)
+    (fh/add-mocks-to-tmp)
+    (fh/prep-paths))
+
+(use-fixtures :once prep)
 
 ; TODO: pre-process path in pipeline .yml
 (deftest install-pipeline-test

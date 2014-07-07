@@ -10,6 +10,7 @@
      (.. f getAbsolutePath)))
 
 (def tmp-dir (join root-path ".tmp"))
+(def mocks-tmp (join tmp-dir "mocks"))
 
 (defn tmp-path
   [path]
@@ -25,3 +26,11 @@
   (println "cleaning" tmp-dir)
   (fs/delete-dir tmp-dir)
   (f))
+
+(defn add-mocks-to-tmp [] "copy mock over to tmp"
+  (fs/copy-dir (join root-path "test-resources" "mocks") tmp-dir))
+
+(defn prep-paths [] "Turn relative paths into absolute paths"
+  ;;;;;;;;;;;;;;; here.......
+  ;(def yml-files (filter (file-seq (io/file mocks-tmp))))
+  (println "todo...."))

@@ -10,8 +10,6 @@
 
 (def not-nil? (complement nil?))
 
-;(defmulti foo (fn [x] (first (map key x))) :default :unknown)
-
 (defn- first-key
   "Return the first key in the map"
   [m & more]
