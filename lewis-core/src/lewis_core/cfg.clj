@@ -19,6 +19,7 @@
 
 (defn get-suffix [path]
   "Get file suffix"
+  (println "get-suffix" path)
   (def basename (fs/base-name path))
   (if (= (.indexOf basename ".") -1)
     :no-suffix
@@ -40,13 +41,19 @@
   "Return the path to the pipeline file and its suffix"
   (let [
     dir (io/file dir-path)
-    files (file-seq dir)
+    files (.listFiles dir)
     pipeline (some #(if(is-pipeline %) %) files)]
+    (println "files -> " files)
     (log/debug "found pipeline" pipeline)
     (assert (not (nil? pipeline)))
     [(.getAbsolutePath pipeline) (get-suffix pipeline)]))
 
 (defmulti #^{:private true} parse-config :suffix :default :suffix-not-supported)
+
+(defmethod #^{:private true} parse-config :no-suffix [obj]
+  (log/warn "no suffix!")
+  {}
+  )
 
 (defmethod #^{:private true} parse-config :yml [obj]
   "Install from file"
@@ -56,5 +63,7 @@
 (defn read-cfg
   "Read the config"
   [path]
+  (log/debug "read-cfg" path)
   (let [[path suffix] (get-pipeline-path-and-suffix path)]
+    (println "path and suffix" path suffix)
     (parse-config {:suffix suffix :path path})))

@@ -19,15 +19,17 @@
 
 (defmulti #^{:private true} install-src first-key)
 
-(defmethod #{:private true} install-src :file
-   "Install src from file"
-   [m dest-dir]
+(defmethod #^{:private true} install-src :file [m dest-dir]
+  "....."
+   (println "........ install from file" m dest-dir)
    (def src-path (m :file))
    (assert (not-nil? src-path))
    (log/trace "copy" src-path "->" dest-dir)
    (fs/copy-dir src-path dest-dir))
 
-(defmethod #{:private true} install-src :git [m dir] (println "TODO"))
+(defmethod #^{:private true} install-src :git [m dir]
+  ".........."
+  (println "TODO"))
 
 (defmulti #^{:private true} install :type :default :oops)
 
@@ -59,7 +61,8 @@
     (fs/mkdirs pipeline-dir)
     (install pipeline-config dest-dir)
     ;TODO...
-    (println "Reading config...")
-    (def config cfg/read-cfg dest-dir)
+    (println "Reading config..." dest-dir)
+    (def config (cfg/read-cfg dest-dir))
+    (println "config..." config)
     (install-src (config :src) src-dest-dir)
     {:result {:installation-path dest-dir}}))
