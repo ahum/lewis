@@ -2,6 +2,13 @@
 
 A Clojure library designed to ... well, that part is up to you.
 
+
+## Running tests
+
+    (require 'lewis-core.core-test :reload-all)
+    (in-ns 'lewis-core.core-test)
+    (run-tests)
+
 ## Usage
 
 ### Install a pipeline
