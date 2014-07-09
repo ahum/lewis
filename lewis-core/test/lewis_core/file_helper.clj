@@ -32,5 +32,17 @@
 
 (defn prep-paths [] "Turn relative paths into absolute paths"
   ;;;;;;;;;;;;;;; here.......
+  ;(filter #(.endsWith (.getName %) ".yml") (file-seq (io/file ".")))
+  (def only-yml (fn [f] (.endsWith (.getName f) ".yml")))
+  (def yml-files (filter only-yml (file-seq (io/file mocks-tmp))))
+
+  (defn fix-paths [yml-file]
+    "fix the paths from relative to absolute in the yml-file"
+    (println "fix paths >> " yml-file)
+    )
   ;(def yml-files (filter (file-seq (io/file mocks-tmp))))
-  (println "todo...."))
+  (println ">>>>>>>>>>")
+  (println (seq yml-files))
+  ; now for each file - fix paths
+  (doseq [f yml-files] (fix-paths f))
+  )
