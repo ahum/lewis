@@ -2,7 +2,10 @@
   (:require [clojure.string :as str]
             [clojure.java.io :as io]
             [me.raynes.fs :as fs]
-            [clj-yaml.core :as yaml]))
+            [clj-yaml.core :as yaml]
+            [clojure.walk :as walk]
+            [lewis-core.path-fixer :as pf]
+            ))
 
 (defn join [& bits] (str/join "/" bits))
 
@@ -31,6 +34,23 @@
 (defn add-mocks-to-tmp [] "copy mock over to tmp"
   (fs/copy-dir (join root-path "test-resources" "mocks") tmp-dir))
 
+(defn process-yml [yml-path]
+  "process the yml file "
+
+  (defn visit-prop [p] 
+    (if 
+      (and (string? p) (.startsWith p "..")) 
+        (let 
+          [ out (pf/expand-path (io/file yml-path) p) ] 
+          out)
+        p))
+
+  (let 
+    [config (yaml/parse-string (slurp yml-path))
+     processed (walk/postwalk visit-prop config)
+     yml-str (yaml/generate-string processed)]
+     (spit yml-path yml-str)))
+
 (defn prep-paths [] "Turn relative paths into absolute paths"
   ;;;;;;;;;;;;;;; here.......
   ;(filter #(.endsWith (.getName %) ".yml") (file-seq (io/file ".")))
@@ -40,13 +60,9 @@
   (defn fix-paths [yml-file]
     "fix the paths from relative to absolute in the yml-file"
     (println "fix paths >> " yml-file)
-    (let 
-      [m (yaml/parse-string (slurp yml-file))]
+    (process-yml yml-file))
 
-      ))
-  ;(def yml-files (filter (file-seq (io/file mocks-tmp))))
-  (println ">>>>>>>>>>" yml-files)
-  (println (seq yml-files))
+  (println "found yml-files: " (seq yml-files))
   ; now for each file - fix paths
   (doseq [f yml-files] (fix-paths f))
   )
