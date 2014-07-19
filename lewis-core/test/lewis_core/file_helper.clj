@@ -1,7 +1,8 @@
 (ns lewis-core.file-helper
   (:require [clojure.string :as str]
             [clojure.java.io :as io]
-            [me.raynes.fs :as fs]))
+            [me.raynes.fs :as fs]
+            [clj-yaml.core :as yaml]))
 
 (defn join [& bits] (str/join "/" bits))
 
@@ -39,9 +40,12 @@
   (defn fix-paths [yml-file]
     "fix the paths from relative to absolute in the yml-file"
     (println "fix paths >> " yml-file)
-    )
+    (let 
+      [m (yaml/parse-string (slurp yml-file))]
+
+      ))
   ;(def yml-files (filter (file-seq (io/file mocks-tmp))))
-  (println ">>>>>>>>>>")
+  (println ">>>>>>>>>>" yml-files)
   (println (seq yml-files))
   ; now for each file - fix paths
   (doseq [f yml-files] (fix-paths f))
