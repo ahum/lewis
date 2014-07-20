@@ -7,23 +7,28 @@
             [lewis-core.file-helper :as fh]
             ))
 
-(defn prep
+(defn prep 
+    []
+    "Prepare the .tmp folder for testing"
     (fh/clean-tmp)
     (fh/add-mocks-to-tmp)
     (fh/prep-paths))
 
 (use-fixtures :once prep)
-
-; TODO: pre-process path in pipeline .yml
+; how to run a single test with fixtures?
 (deftest install-pipeline-test
   (testing "A pipeline is installed from file"
     (let
-      [ app-config {:home-dir (fh/tmp-path "core-test-one")}
-        params {:type :file, :path (fh/mock-pipeline "core-test-one"), :name "my-app"}
+      [ 
+        home-dir (fh/tmp-path "core-test-one")
+        app-config {:home-dir home-dir}
+        params { :type :file, :path (fh/mock-pipeline "core-test-one"), :name "my-app"}
         result (lc/install-pipeline app-config params)
-        dest-dir (fh/join (app-config :home-dir) "pipelines/my-app/pipeline")
-        expected { :result {:installation-path dest-dir}}]
+        install-dir (fh/join home-dir "pipelines/my-app")
+        pipe-dir (fh/join install-dir "pipeline")
+        expected { :result {:installation-path pipe-dir}}]
       (is (= expected result))
-      (is (fs/directory? dest-dir))
-      (is (fs/exists? (fh/join dest-dir "pipeline.yml")))
+      (is (fs/directory? pipe-dir))
+      (is (fs/exists? (fh/join pipe-dir "pipeline.yml")))
+      (is (fs/exists? (fh/join install-dir "repo")))
       )))

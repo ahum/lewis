@@ -49,6 +49,8 @@
    The pipeline config can be {:git git-url} or {:file file-path}
    If git - it'll `git clone` the repo to ${home-dir}/pipelines/${name}
   "
+  (println "installing:" app-config)
+  (println "installing:" pipeline-config)
   (log/trace "installing:" pipeline-config)
   (assert (not-nil? (app-config :home-dir)))
   (let [ pipeline-dir (join "/" [(app-config :home-dir) "pipelines"])

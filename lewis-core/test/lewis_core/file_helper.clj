@@ -24,15 +24,16 @@
 (defn mock-pipeline
   [path]
   "The path to the mocks folder"
-  (join root-path "test-resources" "mocks" path "pipeline"))
+  (join mocks-tmp path "pipeline"))
 
-(defn clean-tmp [f] "Clean the .tmp folder"
+(defn clean-tmp 
+  [] 
+  "Clean the .tmp folder"
   (println "cleaning" tmp-dir)
-  (fs/delete-dir tmp-dir)
-  (f))
+  (fs/delete-dir tmp-dir))
 
 (defn add-mocks-to-tmp [] "copy mock over to tmp"
-  (fs/copy-dir (join root-path "test-resources" "mocks") tmp-dir))
+  (fs/copy-dir (join root-path "test-resources" "mocks") (join tmp-dir "mocks")))
 
 (defn process-yml [yml-path]
   "process the yml file "
